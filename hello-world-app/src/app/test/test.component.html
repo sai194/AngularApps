@@ -1,0 +1,31 @@
+<h2>test - {{ name }}</h2>
+<input [id]="myId" type="text" value="SSSS"/>
+<input [disabled]="isDisabled" id="{{ myId }}" type="text" value="SSSS"/>
+<h2>{{ 2+2 }}</h2>
+<h2>{{ "Welcome " + name }}</h2>
+<h2 class="text-success">{{ name.length }}</h2>
+<h2 [class.text-danger]="hasError">{{ greetUser() }}</h2>
+<h2 [ngClass]="messageClasses">{{ siteUrl }}</h2>
+<button (click)="onClick($event)">Greet</button>
+<div>
+<input #myInput type="text">
+<button (click)="logMessage(myInput.value)">Log</button>
+</div>
+<div>
+  <input [(ngModel)]="twoWayText" type="text">
+  <span *ngIf="display">{{ twoWayText }}</span>
+</div>
+<div *ngFor="let color of colors; index as i; first as f; last as l; odd as o; even as e">
+  <h2>{{color}} - {{i}} - {{f}} - {{l}} - {{o}} - {{e}}</h2>
+</div>
+
+<div>
+  <h2>@Input parent to child </h2>
+  {{parentData}}
+</div>
+
+<div>
+  <h2>child to parent</h2>
+  <button (click)="fireEvent()">To Parent</button>
+</div>
+
