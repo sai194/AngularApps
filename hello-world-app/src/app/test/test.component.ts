@@ -26,12 +26,6 @@ export class TestComponent implements OnInit {
     "text-danger": this.hasError
   }
 
-  @Input() public parentData;
-// or
-//  @Input('parentData') public testName;
-
-  @Output() public childEvent = new EventEmitter();
-
   public colors = ["red", "blue", "green"];
 
   constructor() { }
@@ -49,10 +43,6 @@ export class TestComponent implements OnInit {
 
   logMessage(val) {
     console.log(val);
-  }
-
-  fireEvent() {
-    this.childEvent.emit('Hey F');
   }
 
 }

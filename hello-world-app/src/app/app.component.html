@@ -4,19 +4,24 @@
   </h1>
 
 </div>
+<nav>
+  <a routerLink="/departments" routerLinkActive="active">Departments</a>
+  <a routerLink="/employees" routerLinkActive="active">Employees</a>
+  <a routerLink="/tests" routerLinkActive="active">Tests</a>
+</nav>
+<router-outlet></router-outlet>
+<!--<div>-->
+<!--  <app-employee-list></app-employee-list>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--  <app-employee-detail></app-employee-detail>-->
+<!--</div>-->
 
 <div>
-  <app-employee-list></app-employee-list>
-</div>
-
-<div>
-  <app-employee-detail></app-employee-detail>
-</div>
-
-<div>
-  <app-test [parentData] = "testName"
+  <app-parent-child [parentData] = "testName"
   (childEvent)="message=$event">
-  </app-test>
+  </app-parent-child>
   <h2> from Child {{message}}</h2>
 </div>
 
