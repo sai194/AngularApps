@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'rt-demp'`, () => {
+  it(`should have as title 'tdf'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('rt-demp');
+    expect(app.title).toEqual('tdf');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('rt-demp app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('tdf app is running!');
   });
 });
