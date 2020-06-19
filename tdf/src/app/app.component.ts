@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {User} from "./user";
+import { User } from './user';
+import { EnrollmentService } from './enrollment.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,33 @@ import {User} from "./user";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tdf';
-  public topics = ['Angular', 'React', 'Vue'];
-  userModel = new User('Rob', 'rob@test.com', 5556665566, ' ', 'morning',
-    true);
+  title = 'app';
+  topics = ['Angular', 'React', 'Vue'];
+  userModel = new User('Rob', 'rob@test.com', 5556665566, 'default', 'morning', true);
+  topicHasError = true;
+  submitted = false;
+  errorMsg = '';
+
+  constructor(private _enrollmentService: EnrollmentService) {}
+
+  validateTopic(value) {
+    if (value === 'default') {
+      this.topicHasError = true;
+    } else {
+      this.topicHasError = false;
+    }
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    this._enrollmentService.enroll(this.userModel)
+      .subscribe(
+        response => console.log('Success!', response),
+        error => {
+          this.errorMsg = error.statusText;
+          console.log(error);
+        }
+      );
+
+  }
 }

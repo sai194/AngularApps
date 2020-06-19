@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /hello-world/node_modules
+/server/node_modules
+/tdf/node_modules
 
 /dist
 
