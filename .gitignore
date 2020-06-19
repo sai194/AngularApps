@@ -3,6 +3,7 @@ node_modules
 /hello-world/node_modules
 /server/node_modules
 /tdf/node_modules
+/reactive_forms/node_modules
 
 /dist
 
