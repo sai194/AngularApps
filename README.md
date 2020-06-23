@@ -2,7 +2,7 @@
 
 Start Express server
 cd server
-node start
+npm start
 
 Start tdf AngularApps
 ng serve
