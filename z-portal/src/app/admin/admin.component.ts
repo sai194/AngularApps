@@ -13,12 +13,12 @@ export class AdminComponent implements OnInit {
   instances: [''];
   apps: [''];
   applicationTypes: [''];
+  appUrl: 'https://www.google.com/';
 
   constructor(private fb: FormBuilder, private lookupService: LookupService) {}
 
   ngOnInit(): void {
     this.adminGroup = this.fb.group({
-      actualUrl: [''],
       instanceType: ['', [Validators.required]],
       applicationType: ['', [Validators.required]],
       app: ['', [Validators.required]]
@@ -26,9 +26,7 @@ export class AdminComponent implements OnInit {
 
     // of make async
     of(this.lookupService.getInstanceTypes()
-      .subscribe(data => {this.instances = data;
-                          console.log(this.instances);
-        },
+      .subscribe(data => {this.instances = data; },
         error => console.log(error)));
 
     this.lookupService.getApps()
