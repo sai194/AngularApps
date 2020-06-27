@@ -1,0 +1,23 @@
+<div class="container" style="margin-top: 70px;">
+<form [formGroup]="adminGroup" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Instance</label>
+    <select formControlName="instanceType" class="custom-select">
+      <option value="" disabled>Select an instance</option>
+      <option *ngFor="let instance of instances">{{ instance }}</option>
+    </select>
+
+    <label>Application Type</label>
+    <select formControlName="applicationType" class="custom-select">
+      <option value="" disabled>Select an application type</option>
+      <option *ngFor="let appType of applicationTypes">{{ appType }}</option>
+    </select>
+    <label>Application</label>
+    <select formControlName="app" class="custom-select">
+      <option value="" disabled>Select an app</option>
+      <option *ngFor="let app of apps">{{ app }}</option>
+    </select>
+  </div>
+  <button class="btn btn-primary" [disabled]="!adminGroup.valid" type="submit">Get Url</button>
+</form>
+</div>

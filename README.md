@@ -11,6 +11,11 @@ ng serve
 Create express app
 npm install --save express body-parser cors
 
+Use express generator to create express apps , creates a skeleton
+npm install -g express-generator to install Express
+express --view=pug <appName>
+
+
 create AngularApps
 ng new reactive-forms
 component ng g c component name
