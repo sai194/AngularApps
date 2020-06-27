@@ -52,6 +52,4 @@ ng generate component contact-create
 ng generate component contact-list
 ng generate component header
 ng generate component footer
-
-
 `

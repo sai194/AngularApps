@@ -5,7 +5,7 @@ node_modules
 /tdf/node_modules
 /reactive_forms/node_modules
 /z-portal/node_modules
-
+/z-api/node_modules
 /dist
 
 /plugged
