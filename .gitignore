@@ -6,6 +6,9 @@ node_modules
 /reactive_forms/node_modules
 /z-portal/node_modules
 /z-api/node_modules
+/mat-nav-app/node_modules
+/angular-auth/server/node_modules
+/angular-auth/ngApp/server/node_modules
 /dist
 
 /plugged
