@@ -1,0 +1,26 @@
+#container {
+  display: flex;
+  width: 100%;
+  border: 1px solid black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.child {
+  width: 200px;
+  height: 200px;
+  /*flex: 1;*/
+}
+
+#child1 {
+  background-color: red;
+}
+
+#child2 {
+  background-color: blue;
+}
+
+#child3 {
+  background-color: green;
+}
