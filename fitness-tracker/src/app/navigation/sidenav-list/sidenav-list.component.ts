@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import {AuthService} from "../../auth/auth.service";
 
 @Component({
   selector: 'app-sidenav-list',
@@ -9,13 +10,18 @@ export class SidenavListComponent implements OnInit {
 
   @Output() closeSideNav = new EventEmitter<void>();
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
   onClose() {
     this.closeSideNav.emit();
+  }
+
+  onLogout() {
+    this.authService.logout();
+    this.onClose();
   }
 
 }

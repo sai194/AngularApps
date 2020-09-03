@@ -39,3 +39,5 @@ ng g c welcome --module app.module
 https://github.com/angular/flex-layout
 
 npm i -s @angular/flex-layout --if not working then use npm install @angular/flex-layout@9.0.0-beta.31
+
+npm install --save rxjs-compat
