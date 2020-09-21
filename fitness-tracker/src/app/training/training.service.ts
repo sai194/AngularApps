@@ -12,8 +12,7 @@ export class TrainingService {
 
   url = 'http://localhost:3000/exercises';
 
-  private availableExercises: Exercise[] = [
-  ];
+  private availableExercises: Exercise[] = [];
 
   private runningExercise: Exercise;
 
@@ -27,7 +26,7 @@ export class TrainingService {
   getAvailableExercises() {
 
     if(!this.areExercisesLoaded) {
-      this.httpClient.get<any>(this.url + '/lookup')
+      this.httpClient.get<Exercise[]>(this.url + '/lookup')
         .pipe(catchError(this.handleError))
         .subscribe(data => {this.availableExercises = data;})
         ;
