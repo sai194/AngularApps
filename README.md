@@ -57,3 +57,8 @@ or
 
 npm install --save bootstrap jquery
 Update angular.json file and add the file paths of Bootstrap CSS and JS files as well as jQuery to the styles and scripts arrays under the build target: "architect": { "build": { [...], "styles": [ "src/styles.css", "node_modules/bootstrap/dist/css/bootstrap.min.css" ], "scripts": [ "node_modules/jquery/dist/jquery.min.js", "node_modules/bootstrap/dist/js/bootstrap.min.js" ] }
+
+flex layout
+npm i -s @angular/flex-layout @angular/cdk
+npm i -s @angular/flex-layout@^9.0.0-beta.31
+https://github.com/angular/flex-layout

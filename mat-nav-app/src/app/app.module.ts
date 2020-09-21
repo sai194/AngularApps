@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatFormFieldModule} from "@angular/material/form-field";
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FlexLayoutModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
